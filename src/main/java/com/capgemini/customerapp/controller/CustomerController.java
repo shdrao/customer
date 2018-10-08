@@ -46,11 +46,11 @@ public class CustomerController {
 		return new ResponseEntity<Customer>(HttpStatus.NOT_FOUND);
 	}
 
-	@DeleteMapping("/delete")//
-	public ResponseEntity<Customer> deleteCustomer(@RequestBody Customer customer) {
-		Customer customer1 = customerService.getCustomerById(customer.getCustomerId());
+	@DeleteMapping("/delete/{customerId}")//
+	public ResponseEntity<Customer> deleteCustomer(@PathVariable int customerId) {
+		Customer customer1 = customerService.getCustomerById(customerId);
 		if (customer1 != null) {
-			customerService.deleteCustomer(customer);
+			customerService.deleteCustomer(customer1);
 			return new ResponseEntity<Customer>(HttpStatus.OK);
 		}
 		return new ResponseEntity<Customer>(HttpStatus.NOT_FOUND);

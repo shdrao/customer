@@ -12,16 +12,16 @@ import com.capgemini.customerapp.exception.CustomerNotFoundException;
 @Service
 public interface CustomerService {
 
-	public Customer authentication(Customer customer) throws CustomerNotFoundException, AuthenticationFailedException;//
+	public Customer authentication(Customer customer) throws CustomerNotFoundException, AuthenticationFailedException;
 
-	public Customer addCustomer(Customer customer) throws CustomerExistsException;//
+	public Customer addCustomer(Customer customer) throws CustomerExistsException;
 
-	public Customer getCustomerById(int customerId) throws CustomerNotFoundException;//
+	public Customer getCustomerById(int customerId) throws CustomerNotFoundException;
 
-	public List<Customer> getAllCustomers();//
+	public List<Customer> getAllCustomers();
 
-	public void deleteCustomer(Customer customer) throws CustomerNotFoundException;//
+	public void deleteCustomer(Customer customer) throws CustomerNotFoundException;
 
-	public Customer editCustomer(Customer customer) throws CustomerNotFoundException;//
+	public Customer editCustomer(Customer customer) throws CustomerNotFoundException;
 
 }
