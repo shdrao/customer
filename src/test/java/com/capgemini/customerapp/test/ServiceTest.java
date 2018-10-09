@@ -36,14 +36,14 @@ public class ServiceTest {
 		MockitoAnnotations.initMocks(this);
 	}
 	
-//	@Test
-//	public void testAuthenticateWhichreturnscustomer() {
-//		Customer customer= new Customer(1, null, "12", null, null);
-//		Customer customer1= new Customer(1, "A", "12", "XYZ", "a@a");
-//		Optional<Customer> optionalProduct = Optional.of(customer1);
-//		when(customerRepository.findById(customer.getCustomerId())).thenReturn(optionalProduct);
-//		assertEquals(customer1, customerService.authentication(customer));
-//	}
+	@Test
+	public void testAuthenticateWhichreturnscustomer() {
+		Customer customer= new Customer(1, null, "12", null, null);
+		Customer customer1= new Customer(1, "A", "12", "XYZ", "a@a");
+		Optional<Customer> optionalProduct = Optional.of(customer1);
+		when(customerRepository.findById(customer.getCustomerId())).thenReturn(optionalProduct);
+		assertEquals(customer1, customerService.authentication(customer));
+	}
 	
 //	@Test
 //	public void testFindCustomerByIdWhichReturnsCustomer() throws CustomerNotFoundException {
